@@ -31,7 +31,7 @@ contract YieldAggregator {
         usdc.transferFrom(msg.sender, address(this), amount);
         usdc.approve(address(aave), amount);
 
-        aave.deposit(address(usdc), amount, msg.sender, 0); // deposited on behalf of user
+        aave.deposit(address(usdc), amount, msg.sender, 0); 
 
         deposits[msg.sender] += amount;
     }
